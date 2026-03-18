@@ -1,0 +1,32 @@
+#---the initial cabinet---
+inventory = ["malaria_rdt", "microscope_slides", "lancets", "alcohol_swabs"]
+print("---MORNING AUDIT REPORT---")
+print(f"Current stock: {inventory}")
+print(f"Total unique item: {len(inventory)}")
+
+print(f"[ALERT] priority 1 item: {inventory[0].upper()}")
+print(f"[NOTE] last item in delivery: {inventory[-1].title()}")
+
+inventory.append("latex_gloves")
+print(inventory)
+
+inventory.insert(0, "blood_bags")
+print(inventory)
+
+inventory[2] = "quarts_slides"
+print(inventory)
+
+dispensed_items = inventory.pop(3)
+print(f"[ACTION] Dispensed {dispensed_items.upper()} to Neonatal ward")
+
+expired_item = "alcohol_swabs"
+inventory.remove(expired_item)
+print(inventory)
+
+inventory.reverse()
+print(inventory)
+
+inventory.sort()
+print(inventory)
+
+
