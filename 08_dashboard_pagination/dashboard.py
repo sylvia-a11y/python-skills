@@ -35,3 +35,9 @@ page_3 = patient_registry[PAGE_SIZE * 2: ]
 print(f"\n---PAGE 3(Remaining Records)---")
 for patient in page_3:
     print(f"- {patient}")
+
+#Negative slicing(most recent 6 patients)
+page_4 = patient_registry[-PAGE_SIZE:]
+print(f"\n---Most recent patients(Records{total_patients - PAGE_SIZE} - {total_patients})---")
+for patient in page_4:
+    print(f"-{patient}")
